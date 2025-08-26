@@ -1,27 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>내 GPTs 모음</title>
+  <meta charset="UTF-8">
+  <title>병원 GPTs 카테고리</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
+    h1 { text-align: center; margin-bottom: 30px; }
+    .tabs { text-align: center; margin-bottom: 30px; }
+    .tab {
+      display: inline-block; padding: 10px 20px; margin: 5px;
+      border: 1px solid #007bff; border-radius: 6px; cursor: pointer;
+      background: white; color: #007bff;
+    }
+    .tab.active { background: #007bff; color: white; }
+    .cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .card {
+      width: 250px; background: white; border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px; text-align: center;
+    }
+    .card img { width: 60px; height: 60px; margin-bottom: 15px; }
+    .card h3 { margin: 10px 0; }
+    .btn {
+      display: inline-block; margin-top: 10px;
+      padding: 8px 15px; background: #007bff; color: white;
+      border-radius: 6px; text-decoration: none;
+    }
+  </style>
 </head>
 <body>
+
   <h1>병원 GPTs 카테고리</h1>
 
-  <h2>콘텐츠 제작</h2>
-  <ul>
-    <li><a href="https://chatgpt.com/g/xxxxxxxx">자청스타일 릴스 생성기</a></li>
-    <li><a href="https://chatgpt.com/g/yyyyyyyy">피부과 홍보문구 생성기</a></li>
-  </ul>
+  <!-- 상단 카테고리 버튼 -->
+  <div class="tabs">
+    <span class="tab active" onclick="showCategory('content')">콘텐츠 제작</span>
+    <span class="tab" onclick="showCategory('edu')">교육</span>
+    <span class="tab" onclick="showCategory('work')">업무 효율</span>
+  </div>
 
-  <h2>교육</h2>
-  <ul>
-    <li><a href="https://chatgpt.com/g/zzzzzzzz">환자 교육자료 생성기(당뇨)</a></li>
-  </ul>
+  <!-- 카드 목록 -->
+  <div id="content" class="cards category">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3208/3208676.png">
+      <h3>자청스타일 릴스 생성기</h3>
+      <p>자청식 글쓰기 스타일로 릴스를 자동 제작</p>
+      <a class="btn" href="👉 회장님 GPT 링크 붙여넣기" target="_blank">Open GPT</a>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+      <h3>피부과 홍보문구 생성기</h3>
+      <p>환자 친화적인 피부과 홍보 문구 자동 생성</p>
+      <a class="btn" href="👉 회장님 GPT 링크 붙여넣기" target="_blank">Open GPT</a>
+    </div>
+  </div>
 
-  <h2>업무 효율</h2>
-  <ul>
-    <li><a href="https://chatgpt.com/g/aaaaaaa">회의록 요약 도우미</a></li>
-  </ul>
+  <div id="edu" class="cards category" style="display:none;">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+      <h3>환자 교육자료 생성기</h3>
+      <p>당뇨 환자 맞춤형 교육자료 제작</p>
+      <a class="btn" href="👉 회장님 GPT 링크 붙여넣기" target="_blank">Open GPT</a>
+    </div>
+  </div>
+
+  <div id="work" class="cards category" style="display:none;">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png">
+      <h3>회의록 요약 도우미</h3>
+      <p>회의 내용을 간단하게 요약해주는 AI</p>
+      <a class="btn" href="👉 회장님 GPT 링크 붙여넣기" target="_blank">Open GPT</a>
+    </div>
+  </div>
+
+  <script>
+    function showCategory(cat) {
+      document.querySelectorAll('.category').forEach(c => c.style.display = 'none');
+      document.getElementById(cat).style.display = 'flex';
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
