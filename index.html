@@ -1,87 +1,51 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>덴탈핏 | AI 도구 모음</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f5f7fa; }
-    h1 { text-align: center; margin-bottom: 30px; font-size: 28px; }
-    
-    /* 카드들을 가로로 배치 */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      justify-content: center;
-    }
-
-    /* 카드 디자인 */
-    .card {
-      background: white; border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px; text-align: center;
-    }
-
-    .card img { width: 60px; height: 60px; margin-bottom: 15px; }
-    .card h3 { margin: 10px 0; font-size: 18px; }
-    .card p { font-size: 14px; color: #555; min-height: 40px; }
-    
-    .btn {
-      display: inline-block; margin-top: 10px;
-      padding: 8px 15px; background: #007bff; color: white;
-      border-radius: 6px; text-decoration: none;
-    }
-
-    footer { margin-top: 40px; text-align: center; font-size: 12px; color: gray; }
-  </style>
-</head>
-<body>
-
-  <h1>덴탈핏 | AI 도구 모음</h1>
-
-  <div class="cards">
-    <!-- 치과용 스레드 -->
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3208/3208676.png" alt="thread icon">
-      <h3>치과용 스레드</h3>
-      <p>치과 주제 특화 스레드 작성/요약 도구</p>
-      <a class="btn" href="#" target="_blank">GPT 바로가기</a>
-    </div>
-
-    <!-- 네이버 리뷰 답글봇 -->
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="review bot icon">
-      <h3>네이버 리뷰 답글봇</h3>
-      <p>리뷰 상황별 신뢰감 있는 답글 자동 제안</p>
-      <a class="btn" href="#" target="_blank">GPT 바로가기</a>
-    </div>
-
-    <!-- 문장 콜렉터 -->
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="collector icon">
-      <h3>문장 콜렉터</h3>
-      <p>좋은 카피/환자 질문을 모아 재사용 관리</p>
-      <a class="btn" href="#" target="_blank">GPT 바로가기</a>
-    </div>
-
-    <!-- 병원 블로그 제목 뽑기 -->
-    <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="blog title icon">
-      <h3>병원 블로그 제목 뽑기</h3>
-      <p>키워드만 넣으면 클릭을 부르는 제목 자동 제안</p>
-      <a class="btn" href="#" target="_blank">GPT 바로가기</a>
-    </div>
-  </div>
-
-  <footer>
-    Icons created by Freepik - <a href="https://www.flaticon.com/free-icons/tips">Tips</a>, 
-    <a href="https://www.flaticon.com/free-icons/document">Document</a>, 
-    <a href="https://www.flaticon.com/free-icons/writing">Writing</a>, 
-    <a href="https://www.flaticon.com/free-icons/paper">Paper</a> from <a href="https://www.flaticon.com/">Flaticon</a>
-  </footer>
-
-</body>
-</html>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f4f6f9;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .card {
+    width: 250px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  .card h3 {
+    margin: 10px 0;
+  }
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;     /* 줄 간격 */
+    word-break: keep-all; /* 단어 단위로 줄바꿈 */
+    white-space: normal;  /* 자동 줄바꿈 허용 */
+    margin-bottom: 15px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+</style>
 
 
 
