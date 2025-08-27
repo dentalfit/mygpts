@@ -1,46 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>덴탈핏 | AI 도구 모음</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    /* 👉 여기에 지금 작성하신 CSS (스타일) 넣기 */
+    :root{--blue:#1877f2; --bg:#f5f7fb; --card:#fff;}
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,"Noto Sans KR",Arial,sans-serif; background:var(--bg); color:#111}
+    header{max-width:1200px; margin:48px auto 24px; padding:0 16px; text-align:center}
+    h1{margin:0; font-size:40px; font-weight:800}
+    main{max-width:1200px; margin:0 auto 80px; padding:0 16px}
+    /* 카드 그리드 */
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:24px;
+    }
+    /* 카드 */
+    .card{
+      background:var(--card); border-radius:20px; padding:28px 24px;
+      box-shadow:0 16px 40px rgba(0,0,0,.07); text-align:center;
+      border:1px solid #eef1f6;
+    }
+    .card img{width:84px; height:84px; margin-bottom:18px}
+    .title{font-size:22px; font-weight:800; margin:8px 0 6px}
+    .desc{
+      font-size:16px; color:#6b7280; margin:0 0 18px;
+      line-height:1.6; word-break:keep-all; overflow-wrap:anywhere; white-space:normal;
+      min-height:52px; /* 두줄 영역 확보 */
+    }
+    .btn{
+      display:inline-block; padding:12px 20px; border-radius:12px; font-weight:800;
+      background:var(--blue); color:#fff; text-decoration:none; border:1.5px solid var(--blue);
+    }
+    .btn:hover{filter:brightness(.96)}
+    footer{ text-align:center; font-size:12px; color:#888; margin:36px 0 24px; }
   </style>
 </head>
 <body>
-  <h1>덴탈핏 | AI 도구 모음</h1>
+  <header>
+    <h1>덴탈핏 | AI 도구 모음</h1>
+  </header>
 
-  <div class="cards">
-    <div class="card">
-      <img src="이미지링크1.png">
-      <h3>치과용 스레드</h3>
-      <p>치과 주제 특화 스레드 작성/요약 도구</p>
-      <a class="btn" href="👉 GPT 링크 붙여넣기" target="_blank">GPT 바로가기</a>
-    </div>
+  <main>
+    <div class="cards">
+      <!-- 1. 치과용 스레드 -->
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4144/4144784.png" alt="">
+        <div class="title">치과용 스레드</div>
+        <p class="desc">치과 주제 특화 스레드 작성/요약 도구</p>
+        <a class="btn" href="PUT_LINK_THREAD" target="_blank" rel="noopener">GPT 바로가기</a>
+      </div>
 
-    <div class="card">
-      <img src="이미지링크2.png">
-      <h3>네이버 리뷰 답글봇</h3>
-      <p>리뷰 상황별 신뢰감 있는 답글 자동 제안</p>
-      <a class="btn" href="👉 GPT 링크 붙여넣기" target="_blank">GPT 바로가기</a>
-    </div>
+      <!-- 2. 네이버 리뷰 답글봇 -->
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/9241/9241547.png" alt="">
+        <div class="title">네이버 리뷰 답글봇</div>
+        <p class="desc">리뷰 상황별 신뢰감 있는 답글 자동 제안</p>
+        <a class="btn" href="PUT_LINK_REVIEWBOT" target="_blank" rel="noopener">GPT 바로가기</a>
+      </div>
 
-    <div class="card">
-      <img src="이미지링크3.png">
-      <h3>문장 콜렉터</h3>
-      <p>좋은 카피/환자 질문을 수집·정리해 재사용 가능</p>
-      <a class="btn" href="👉 GPT 링크 붙여넣기" target="_blank">GPT 바로가기</a>
-    </div>
+      <!-- 3. 문장 콜렉터 -->
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/992/992516.png" alt="">
+        <div class="title">문장 콜렉터</div>
+        <p class="desc">좋은 카피/환자 질문을 모아 재사용 관리</p>
+        <a class="btn" href="PUT_LINK_COLLECTOR" target="_blank" rel="noopener">GPT 바로가기</a>
+      </div>
 
-    <div class="card">
-      <img src="이미지링크4.png">
-      <h3>병원 블로그 제목 뽑기</h3>
-      <p>키워드만 넣으면 클릭을 부르는 제목을 자동 제안</p>
-      <a class="btn" href="👉 GPT 링크 붙여넣기" target="_blank">GPT 바로가기</a>
+      <!-- 4. 병원 블로그 제목 뽑기 -->
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="">
+        <div class="title">병원 블로그 제목 뽑기</div>
+        <p class="desc">키워드만 넣으면 클릭을 부르는 제목 자동 제안</p>
+        <a class="btn" href="PUT_LINK_BLOGTITLE" target="_blank" rel="noopener">GPT 바로가기</a>
+      </div>
     </div>
-  </div>
+  </main>
+
+  <footer>
+    Icons created by Freepik –
+    <a href="https://www.flaticon.com/free-icons/tips" target="_blank" rel="noopener">Tips</a>,
+    <a href="https://www.flaticon.com/free-icons/document" target="_blank" rel="noopener">Document</a>,
+    <a href="https://www.flaticon.com/free-icons/writing" target="_blank" rel="noopener">Writing</a>,
+    <a href="https://www.flaticon.com/free-icons/paper" target="_blank" rel="noopener">Paper</a>
+    from <a href="https://www.flaticon.com/" target="_blank" rel="noopener">Flaticon</a>
+  </footer>
 </body>
 </html>
+
 
 
 
